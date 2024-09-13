@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "nodemon src/server/rmr.js --ext html,css,js,json"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "sqlite3": "^5.1.7"
+  }
+}
