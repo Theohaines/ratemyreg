@@ -1,0 +1,29 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate my reg - create</title>
+
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/create/create.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <img src="/media/platelogo.png" alt="Rate my reg numberplate logo">
+            <div class="nav-links">
+                <h3><a href="/">HOME</a></h3>
+                <h3><a href="/create">NEW COMMENT</a></h3>
+            </div>
+        </div>
+
+        <div class="comment-creator">
+            <input class="reg-plate-outline" id="commentReg" type="text" placeholder="XX00XXX" maxlength="7" minlength="7">
+            <input id="commentTitle" type="text" placeholder="title (max 30char)" minlength="3" maxlength="30">
+            <textarea id="commentBody" placeholder="comment body (max 260char)" minlength="30" maxlength="260"></textarea>
+            <button class="reg-plate-outline reg-plate-outline-button" style="width: 95%;" onclick="createCommentCli()">submit</button>
+        </div>
+    </div>
+</body>
+<script src="/scripts/createcommentcli.js"></script>
+</html>

@@ -1,0 +1,31 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate my reg - regview</title>
+
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/regview/regview.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar">
+            <img src="/media/platelogo.png" alt="Rate my reg numberplate logo">
+            <div class="nav-links">
+                <h3><a href="/">HOME</a></h3>
+                <h3><a href="/create">NEW COMMENT</a></h3>
+            </div>
+        </div>
+        
+         <div class="reg-info-container">
+            <h1 id="plate" class="reg-plate-outline reg-info-reg">WJ14LKF</h1>
+            <button class="reg-plate-outline reg-info-button reg-plate-outline-button" onclick="redirectWithRef('/create')">new comment</button>
+         </div>
+
+         <div class="comments-container" id="commentContainer">
+         </div>
+    </div>
+</body>
+<script src="/scripts/toolkitcli.js"></script>
+<script src="/scripts/loadregcli.js"></script>
+</html>

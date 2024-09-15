@@ -1,0 +1,16 @@
+{
+    "ERRORS" : [
+        "E000: Invalid registration plate",
+        "E001: Comment title is too short",
+        "E002: Comment title is too long",
+        "E003: Comment body is too short",
+        "E004: Comment body is too long",
+        "E005: Internal server error, try again later"
+    ],
+    "WARNINGS" : [
+
+    ],
+    "INFOMATION" : [
+
+    ]
+}
