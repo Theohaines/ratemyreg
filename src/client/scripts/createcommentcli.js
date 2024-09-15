@@ -4,8 +4,8 @@ const commentBody = document.getElementById("commentBody");
 
 async function createCommentCli(){
     if (commentReg.value.length != 7){
-/*         alert("Registration number too short!");
-        return; */
+        alert("Registration number too short!");
+        return;
     }
 
     if (commentTitle.value.length < 3){
