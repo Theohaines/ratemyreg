@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 const toolbox = require('./scripts/toolbox.js');
 const loadreg = require('./scripts/loadreg.js');
 const createcomment = require('./scripts/createcomment.js');
+const loadcomments = require('./scripts/loadcomments.js');
 
 //Resource routes
 app.use('/', express.static(path.resolve('src/client')));
@@ -60,6 +61,12 @@ app.use('/validatereg', async (req, res) => {
     }
 
     res.status(200).json(JSON.stringify({"response" : "okay", "payload" : ""}));
+})
+
+app.use('/loadcomments', async (req, res) => {
+    let comments = await loadcomments.loadComments(req.body.amnt, req.body.srchtype);
+
+    res.status(200).send(JSON.stringify(comments));
 })
 
 //Handle status

@@ -22,7 +22,13 @@
             <input id="searchReg" type="text" class="reg-plate-outline" placeholder="XX00XXX" minlength="7" maxlength="7">
             <button class="reg-plate-outline  reg-plate-outline-button" onclick="callServerToValidateReg()">search</button>
         </div>
+
+        <h1>most recent comments</h1>
+        <div class="comments-container" id="commentContainer">
+        </div>
     </div>
 </body>
 <script src="/scripts/searchforreg.js"></script>
+<script src="/scripts/loadcommentscli.js"></script>
+<script>loadCommentsCli(10, "l")</script>
 </html>
