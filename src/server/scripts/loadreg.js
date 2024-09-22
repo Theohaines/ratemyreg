@@ -27,7 +27,6 @@ async function loadComments(reg) {
                 reject(false);
             }
 
-            console.log(rows);
             resolve(rows);
         })
     });

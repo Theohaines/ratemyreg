@@ -20,9 +20,7 @@ function loadRegIntoUI(data){
         return;
     }
 
-
-    console.log(data)
-    try {
+    if (data.payload.length >= 1){
         for (var comment of data.payload) {
             const commentDiv = document.createElement('div');
             commentDiv.className = "comment";
@@ -37,22 +35,21 @@ function loadRegIntoUI(data){
             commentDiv.appendChild(commentBody);
 
 
-            plate.textContent = comment.C_REG;
+            const urlParams = new URLSearchParams(window.location.search);
+            const reg = urlParams.get('REG');
+        
+            plate.textContent = reg;
         }
-    } catch {
-        const commentDiv = document.createElement('div');
-        commentDiv.className = "comment";
-        commentContainer.appendChild(commentDiv);
+    } else {
+        const commentAlert = document.createElement("h2");
+        commentAlert.textContent = "No comments exist for this registration number!";
+        commentAlert.style.textAlign = "center"
+        commentContainer.appendChild(commentAlert);
 
-        const commentTitle = document.createElement('h3');
-        commentTitle.textContent = data.payload.C_TITLE;
-        commentDiv.appendChild(commentTitle);
-
-        const commentBody = document.createElement('h4');
-        commentBody.textContent = data.payload.C_BODY;
-        commentDiv.appendChild(commentBody);
-
-        plate.textContent = data.payload.C_REG;
+        const urlParams = new URLSearchParams(window.location.search);
+        const reg = urlParams.get('REG');
+    
+        plate.textContent = reg;
     }
 }
 
